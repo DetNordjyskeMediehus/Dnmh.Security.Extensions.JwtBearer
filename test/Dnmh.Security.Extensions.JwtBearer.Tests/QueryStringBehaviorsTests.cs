@@ -1,4 +1,3 @@
-using Dnmh.Security.Extensions.JwtBearer;
 using Xunit;
 
 namespace Dnmh.Security.Extensions.JwtBearer.Tests

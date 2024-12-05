@@ -1,4 +1,3 @@
-using Dnmh.Security.Extensions.JwtBearer;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System;
 using Xunit;

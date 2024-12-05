@@ -1,4 +1,4 @@
-# Invio.Extensions.Authentication.JwtBearer
+# Dnmh.Security.Extensions.JwtBearer
 
 [![Appveyor](https://ci.appveyor.com/api/projects/status/vg0xqyrtv6fjnrd5/branch/master?svg=true)](https://ci.appveyor.com/project/invio/invio-extensions-authentication-jwtbearer/branch/master)
 [![NuGet](https://img.shields.io/nuget/v/Invio.Extensions.Authentication.JwtBearer.svg)](https://www.nuget.org/packages/Invio.Extensions.Authentication.JwtBearer/)
@@ -10,7 +10,7 @@ This library extends the functionality of Microsoft's base implementation of JWT
 The latest version of this package is available on NuGet. To install, run the following command:
 
 ```
-PM> dotnet add package Invio.Extensions.Authentication.JwtBearer
+PM> dotnet add package Dnmh.Security.Extensions.JwtBearer
 ```
 
 ### Enable `Bearer` Tokens in URI Query Parameters
@@ -39,11 +39,11 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
 }
 ```
 
-Once you install the package, you can apply it to your [`JwtBearerOptions`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbeareroptions) configuration by calling one of the [`AuthenticationBuilderExtensions.AddJwtBearerQueryStringAuthentication`](https://github.com/invio/Invio.Extensions.Authentication.JwtBearer/blob/master/src/Invio.Extensions.Authentication.JwtBearer/AuthenticationBuilderExtensions.cs) extension methods on the JWT Bearer's `AuthenticationBuilder` as well as applying the [`JwtBearerQueryStringMiddleware`](https://github.com/invio/Invio.Extensions.Authentication.JwtBearer/blob/master/src/Invio.Extensions.Authentication.JwtBearer/JwtBearerQueryStringMiddleware.cs) by calling the [`ApplicationBuilderExtensions.UseJwtBearerQueryString`](https://github.com/invio/Invio.Extensions.Authentication.JwtBearer/blob/master/src/Invio.Extensions.Authentication.JwtBearer/ApplicationBuilderExtensions.cs) extension method.
+Once you install the package, you can apply it to your [`JwtBearerOptions`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbeareroptions) configuration by calling one of the [`AuthenticationBuilderExtensions.AddJwtBearerQueryStringAuthentication`](https://github.com/DetNordjyskeMediehus/Dnmh.Security.Extensions.JwtBearer/blob/main/src/Dnmh.Security.Extensions.JwtBearer/AuthenticationBuilderExtensions.cs) extension methods on the JWT Bearer's `AuthenticationBuilder` as well as applying the [`JwtBearerQueryStringMiddleware`](https://github.com/DetNordjyskeMediehus/Dnmh.Security.Extensions.JwtBearer/blob/main/src/Dnmh.Security.Extensions.JwtBearer/JwtBearerQueryStringMiddleware.cs) by calling the [`ApplicationBuilderExtensions.UseJwtBearerQueryString`](https://github.com/DetNordjyskeMediehus/Dnmh.Security.Extensions.JwtBearer/blob/main/src/Dnmh.Security.Extensions.JwtBearer/ApplicationBuilderExtensions.cs) extension method.
 
 ```cs
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Invio.Extensions.Authentication.JwtBearer;
+using Dnmh.Security.Extensions.JwtBearer;
 
 public void ConfigureServices(IServiceCollection services) {
     services
@@ -68,9 +68,9 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
 }
 ```
 
-### Configuring the [`JwtBearerQueryStringOptions`](https://github.com/invio/Invio.Extensions.Authentication.JwtBearer/blob/master/src/Invio.Extensions.Authentication.JwtBearer/JwtBearerQueryStringOptions.cs)
+### Configuring the [`JwtBearerQueryStringOptions`](https://github.com/DetNordjyskeMediehus/Dnmh.Security.Extensions.JwtBearer/blob/main/src/Dnmh.Security.Extensions.JwtBearer/JwtBearerQueryStringOptions.cs)
 
-By default, this library enable users to send their JWT bearer tokens using the `"access_token"` query string parameter, and the value of that token will be redacted via the middleware. The string `"(REDACTED)"` is put in the token's place before the [`HttpContext`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httpcontext) representing the user's web request is moved up the pipeline. For more information on how to configure this behavior, see the [`JwtBearerQueryStringOptions`](https://github.com/invio/Invio.Extensions.Authentication.JwtBearer/blob/master/src/Invio.Extensions.Authentication.JwtBearer/JwtBearerQueryStringOptions.cs).
+By default, this library enable users to send their JWT bearer tokens using the `"access_token"` query string parameter, and the value of that token will be redacted via the middleware. The string `"(REDACTED)"` is put in the token's place before the [`HttpContext`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httpcontext) representing the user's web request is moved up the pipeline. For more information on how to configure this behavior, see the [`JwtBearerQueryStringOptions`](https://github.com/DetNordjyskeMediehus/Dnmh.Security.Extensions.JwtBearer/blob/main/src/Dnmh.Security.Extensions.JwtBearer/JwtBearerQueryStringOptions.cs).
 
 ### Wrapping Up
 

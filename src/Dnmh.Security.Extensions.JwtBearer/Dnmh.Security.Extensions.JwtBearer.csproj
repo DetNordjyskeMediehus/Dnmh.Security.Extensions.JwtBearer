@@ -6,7 +6,6 @@
     <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Dnmh.Security.Extensions.JwtBearer</AssemblyName>
-    <PackageId>Invio.Extensions.Authentication.JwtBearer</PackageId>
     <PackageTags>jwt;querystring;bearer;token</PackageTags>
     <PackageProjectUrl>https://github.com/DetNordjyskeMediehus/Dnmh.Security.Extensions.JwtBearer/</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/DetNordjyskeMediehus/Dnmh.Security.Extensions.JwtBearer/blob/master/LICENSE.txt</PackageLicenseUrl>

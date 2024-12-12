@@ -2,10 +2,14 @@
 
   <PropertyGroup>
     <AssemblyTitle>Extensions to the Microsoft.AspNetCore.Authentication.JwtBearer namespace</AssemblyTitle>
-    <Version>9.0.0</Version>
+    <Version>9.0.1</Version>
     <TargetFrameworks>net9.0;net8.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Dnmh.Security.Extensions.JwtBearer</AssemblyName>
+    <Company>Det Nordjyske Mediehus</Company>
+    <Title>.Net JWT Bearer Extensions</Title>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Description>A .NET library that provides extension methods for JWT bearer authentication.</Description>
     <PackageTags>jwt;querystring;bearer;token</PackageTags>
     <PackageProjectUrl>https://github.com/DetNordjyskeMediehus/Dnmh.Security.Extensions.JwtBearer/</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/DetNordjyskeMediehus/Dnmh.Security.Extensions.JwtBearer/blob/master/LICENSE.txt</PackageLicenseUrl>

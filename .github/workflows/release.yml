@@ -9,6 +9,8 @@ on:
 
 jobs:
   build:
+    permissions:
+      id-token: write  # enable GitHub OIDC token issuance for this job
 
     runs-on: ubuntu-latest
 
@@ -28,6 +30,12 @@ jobs:
       run: dotnet test --configuration Release --no-build --verbosity normal
     - name: Pack
       run: dotnet pack --configuration Release
+      # Get a short-lived NuGet API key
+    - name: NuGet login
+      uses: NuGet/login@v1
+      id: login
+      with:
+        user: dnmh-psc
+
     - name: Release
-      run: dotnet nuget push **/Release/*.nupkg --api-key "${{ secrets.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
-      
+      run: dotnet nuget push **/Release/*.nupkg --api-key "${{steps.login.outputs.NUGET_API_KEY}}" --source https://api.nuget.org/v3/index.json --skip-duplicate
